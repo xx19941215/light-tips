@@ -10,3 +10,5 @@
 7.[PHP最佳实践之数据库](https://github.com/xx19941215/webBlog/issues/7)
 8.[PHP最佳实践之多字节字符串、字符编码](https://github.com/xx19941215/webBlog/issues/8)
 ### Javascript总结
+1.[Javascript引擎内部的三种抽象操作](https://github.com/xx19941215/webBlog/issues/9)
+2.[彻底弄懂Javascript闭包](https://github.com/xx19941215/webBlog/issues/10)
