@@ -9,7 +9,7 @@ require_once '../uniqueRandom.php';
 
 function insertSort(&$arr) : void
 {
-	for ($i = 0, $c = count($arr) - 1; $i < $c; $i++) {
+    for ($i = 0, $c = count($arr) - 1; $i < $c; $i++) {
 		for ($j = $i + 1; $j > 0; $j--) {
 			if ($arr[$j] < $arr[$j - 1]) {
 				list($arr[$j - 1], $arr[$j]) = array($arr[$j], $arr[$j - 1]);
