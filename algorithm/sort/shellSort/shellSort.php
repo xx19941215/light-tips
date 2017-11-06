@@ -14,7 +14,6 @@ function shellSort(&$arr)
 					while($i >= 0 && $arr[$i] > $temp) {
 						$arr[$j] = $arr[$i];
 					}
-					
 				}
 			}
 		}
