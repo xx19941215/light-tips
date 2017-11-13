@@ -7,7 +7,7 @@
  * 空间复杂度：O(1)
  */
 
-require_once '../uniqueRandom.php';
+require_once __DIR__ . '/../uniqueRandom.php';
 
 function bubbleSort(&$arr) : void
 {

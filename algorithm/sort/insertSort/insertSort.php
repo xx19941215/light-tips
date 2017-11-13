@@ -5,7 +5,7 @@
  * 时间复杂度：最坏O(n2) 平均O(n2)
  * 空间复杂度 O(1)
  */
-require_once '../uniqueRandom.php';
+require_once __DIR__ . '/../uniqueRandom.php';
 
 function insertSort(&$arr) : void
 {
