@@ -3,7 +3,10 @@
 ### 数据结构和算法
 
 #### 算法
-1. [排序算法之冒泡排序](https://github.com/xx19941215/webBlog/issues/13)
+1. [排序算法之冒泡排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/bubbleSort/bubbleSort.php)
+2. [排序算法之插入排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/insertSort/insertSort.php)
+3. [排序算法之希尔排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/shellSort/shellSort.php)
+4. [排序算法之快速排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/quickSort/quickSort.php)
 
 ### PHP系列总结
 
