@@ -7,6 +7,7 @@
 2. [排序算法之插入排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/insertSort/insertSort.php)
 3. [排序算法之希尔排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/shellSort/shellSort.php)
 4. [排序算法之快速排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/quickSort/quickSort.php)
+5. [排序算法之选择排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/selectSort/selectSort.php)
 
 ### PHP系列总结
 
