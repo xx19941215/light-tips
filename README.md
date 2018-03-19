@@ -26,6 +26,9 @@
 6. [PHP最佳实践之异常和错误](https://github.com/xx19941215/webBlog/issues/11)
 7. [PHP最佳实践之上线准备](https://github.com/xx19941215/webBlog/issues/12)
 
+### MYSQL总结
+1. [MySQL索引相关问题总结](https://github.com/xx19941215/webBlog/issues/13)
+
 ### Javascript总结
 1. [Javascript引擎内部的三种抽象操作](https://github.com/xx19941215/webBlog/issues/9)
 2. [彻底弄懂Javascript闭包](https://github.com/xx19941215/webBlog/issues/10)
