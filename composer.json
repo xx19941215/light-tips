@@ -1,0 +1,24 @@
+{
+    "name": "xiao/web-blog",
+    "require": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "xx19941215",
+            "email": "xiaoxiao94@outlook.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-4": {
+            "DataStruct\\": "dataStruct/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
