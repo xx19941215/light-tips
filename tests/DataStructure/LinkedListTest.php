@@ -1,16 +1,16 @@
 <?php
-namespace Test\DataStruct;
+namespace Test\DataStructure;
 
+use DataStructure\LinkedList\LinkedList;
 use \PHPUnit\Framework\TestCase;
-use DataStruct\LinkList;
 
-class LinkListTest extends TestCase
+class LinkedListTest extends TestCase
 {
     private $linkList;
 
     public function setUp()
     {
-        $this->linkList = new LinkList();
+        $this->linkList = new LinkedList();
         parent::setUp();
     }
 

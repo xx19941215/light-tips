@@ -1,32 +1,27 @@
 <?php 
-namespace DataStruct;
-
-class ListNode
-{
-    private $data;
-    private $next;
-
-    public function __construct(string $data)
-    {
-        $this->data = $data;
-    }
-
-    public function __get($var)
-    {
-        return $this->$var;
-    }
-
-    public function __set($var, $val)
-    {
-        return $this->$var = $val;
-    }
-}
-
-class LinkList
+namespace DataStructure\LinkedList;
+/**
+ * Class LinkedList
+ * @package DataStructure\LinkedList
+ * |------------------------------------
+ * | |----|----|    |----|----|    |----|
+ * | | 12 |    ---> | 24 |    ---> |    |
+ * | |----|----|    |----|----|    |----|
+ * |------------------------------------
+ */
+class LinkedList implements \Iterator
 {
     private $head = null;
     private $length = 0;
+    private $currentNode;
+    private $currentPosition;
 
+    /**
+     * 插入一个节点
+     * @param string|null $data
+     * @return bool
+     * complexity O(n)
+     */
     public function insert(string $data = null)
     {
         $newNode = new ListNode($data);
@@ -46,6 +41,12 @@ class LinkList
         return true;
     }
 
+    /**
+     * 在特定节点前插入
+     * @param string $data
+     * @param string $query
+     * complexity O(n)
+     */
     public function insertBefore(string $data, string $query)
     {
         $newNode = new ListNode($data);
@@ -72,6 +73,12 @@ class LinkList
         }
     }
 
+    /**
+     * 在特定节点后插入
+     * @param string|null $data
+     * @param string|null $query
+     * complexity O(n)
+     */
     public function insertAfter(string $data = null, string $query = null)
     {
         $newNode = new ListNode($data);
@@ -103,6 +110,11 @@ class LinkList
         }
     }
 
+    /**
+     * 在最前方插入节点
+     * @param string $data
+     * complexity O(1)
+     */
     public function insertAtFirst(string $data)
     {
         $newNode = new ListNode($data);
@@ -118,6 +130,12 @@ class LinkList
         $this->length++;
     }
 
+    /**
+     * 搜索一个节点
+     * @param string $data
+     * @return bool|null
+     * complexity O(n)
+     */
     public function search(string $data)
     {
         if ($this->length > 0) {
@@ -134,6 +152,11 @@ class LinkList
         return false;
     }
 
+    /**
+     * 删除最前面的节点
+     * @return bool
+     * complexity O(1)
+     */
     public function deleteFirst()
     {
         if ($this->head !== null) {
@@ -151,6 +174,11 @@ class LinkList
         return false;
     }
 
+    /**
+     * 删除最后面的节点
+     * @return bool
+     * complexity O(1)
+     */
     public function deleteLast()
     {
         if ($this->head !== null) {
@@ -175,6 +203,12 @@ class LinkList
         return false;
     }
 
+    /**
+     * 删除特定节点
+     * @param string $query
+     * @return bool
+     * complexity O(n)
+     */
     public function delete(string $query)
     {
         if ($this->head !== null) {
@@ -202,6 +236,10 @@ class LinkList
         return false;
     }
 
+    /**
+     *反转链表
+     * complexity O(n)
+     */
     public function reverse()
     {
         if ($this->head !== null) {
@@ -223,6 +261,12 @@ class LinkList
 
     }
 
+    /**
+     * 返回特定位置的节点
+     * @param int $n
+     * @return null
+     * complexity O(n)
+     */
     public function getNthNode(int $n = 0)
     {
         $count = 0;
@@ -239,6 +283,33 @@ class LinkList
             }
 
         }
+    }
+
+    public function current()
+    {
+        return $this->currentNode->data;
+    }
+
+    public function next()
+    {
+        $this->currentPosition++;
+        $this->currentNode = $this->currentNode->next;
+    }
+
+    public function rewind()
+    {
+        $this->currentPosition = 0;
+        $this->currentNode = $this->head;
+    }
+
+    public function key()
+    {
+        return $this->currentPosition;
+    }
+
+    public function valid()
+    {
+        return $this->currentNode !== NULL;
     }
 
     public function display()

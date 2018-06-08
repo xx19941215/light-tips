@@ -13,7 +13,7 @@
         "classmap": [
         ],
         "psr-4": {
-            "DataStruct\\": "dataStruct/"
+            "DataStructure\\": "dataStructure/"
         }
     },
     "autoload-dev": {
