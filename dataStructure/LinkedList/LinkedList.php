@@ -133,7 +133,7 @@ class LinkedList implements \Iterator
     /**
      * 搜索一个节点
      * @param string $data
-     * @return bool|null
+     * @return bool|ListNode
      * complexity O(n)
      */
     public function search(string $data)
