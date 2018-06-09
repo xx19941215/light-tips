@@ -11,7 +11,7 @@
 
 #### 基础数据结构
 
-1. [单链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/DoubleLinkedList/DoubleLinkedList.php)
+1. [单链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/LinkedList/LinkedList.php)
 
 ### PHP系列总结
 
