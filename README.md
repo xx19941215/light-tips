@@ -1,5 +1,12 @@
 <h1 align="center">Light Tips</h1>
 
+<p align="center">
+<a href="https://github.com/xx19941215/webBlog"><img src="https://img.shields.io/github/forks/xx19941215/webBlog.svg"></a>
+<a href="https://github.com/xx19941215/webBlog"><img src="https://img.shields.io/github/stars/xx19941215/webBlog.svg"></a>
+<a href="https://github.com/xx19941215/webBlog"><img src="https://img.shields.io/badge/php-7.0%2B-blue.svg""></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/cocoapods/l/AFNetworking.svg" alt="License"></a>
+</p>
+
 > 记录Web开发所需要的一些基础知识，主要是PHP、MySQL、Javascript相关内容，还有一些基础的算法和数据结构。
 
 ### 数据结构和算法
