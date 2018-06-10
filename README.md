@@ -1,4 +1,6 @@
-# 萧潇的博客
+<h1 align="center">Light Tips</h1>
+
+> 记录Web开发所需要的一些基础知识，主要是PHP、MySQL、Javascript相关内容，还有一些基础的算法和数据结构。
 
 ### 数据结构和算法
 
