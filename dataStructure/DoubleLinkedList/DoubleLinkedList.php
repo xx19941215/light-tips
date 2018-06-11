@@ -118,6 +118,7 @@ class DoubleLinkedList
                     } else {
                         $currentNode->next = $newNode;
                         $newNode->prev = $currentNode;
+                        $this->last = $newNode;
                     }
 
                     $this->length++;
@@ -158,16 +159,17 @@ class DoubleLinkedList
      */
     public function deleteLast()
     {
-        if ($this->head) {
-            $currentNode = $this->head;
+        if ($this->last) {
+            $currentNode = $this->last;
 
-            while ($currentNode->next) {
-                $currentNode = $currentNode->next;
-                $prevNode = $currentNode->prev;
+            if ($prevNode = $currentNode->prev) {
+                $prevNode->next = null;
+                $this->last = $prevNode;
+            } else {
+                $this->last = null;
+                $this->head = null;
             }
 
-            $this->last = $prevNode;
-            unset($currentNode);
             $this->length--;
             return true;
         }
@@ -183,24 +185,28 @@ class DoubleLinkedList
     {
         if ($this->head) {
             $currentNode = $this->head;
+            $prevNode = null;
 
             while ($currentNode) {
-                $prevNode = $currentNode->prev;
                 if ($currentNode->data === $query) {
                     if ($nextNode = $currentNode->next) {
                         if ($prevNode) {
                             $prevNode->next = $nextNode;
                             $nextNode->prev = $prevNode;
-                            unset($currentNode);
                         } else {
                             $this->head = $nextNode;
+                            $nextNode->prev = null;
                         }
+
+                        unset($currentNode);
                     } else {
                         if ($prevNode) {
                             $this->last = $prevNode;
+                            $prevNode->next = null;
                             unset($currentNode);
                         } else {
-                            return false;
+                            $this->head = null;
+                            $this->last = null;
                         }
                     }
 
@@ -208,6 +214,7 @@ class DoubleLinkedList
                     return true;
                 }
 
+                $prevNode = $currentNode;
                 $currentNode = $currentNode->next;
             }
         }
