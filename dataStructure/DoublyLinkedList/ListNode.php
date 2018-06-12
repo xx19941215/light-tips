@@ -1,5 +1,5 @@
 <?php
-namespace DataStructure\DoubleLinkedList;
+namespace DataStructure\DoublyLinkedList;
 
 class ListNode
 {

@@ -312,6 +312,11 @@ class LinkedList implements \Iterator
         return $this->currentNode !== NULL;
     }
 
+    public function getSize()
+    {
+        return $this->length;
+    }
+
     public function display()
     {
         echo 'LinkList length: ' . $this->length . PHP_EOL;

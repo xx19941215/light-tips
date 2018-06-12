@@ -1,9 +1,9 @@
 <?php
 
-namespace DataStructure\DoubleLinkedList;
+namespace DataStructure\DoublyLinkedList;
 
 /**
- * Class DoubleLinkedList
+ * Class DoublyLinkedList
  * @package DataStructure\DoubledLinkedList
  * |-----------------------------------------------------
  * ||----| |----|----|----|   |---- |----|----|    |----|
@@ -11,7 +11,7 @@ namespace DataStructure\DoubleLinkedList;
  * ||----| |----|----|----|   |---- |----|----|    |----|
  * |-----------------------------------------------------
  */
-class DoubleLinkedList
+class DoublyLinkedList
 {
     private $head = null;
     private $last = null;

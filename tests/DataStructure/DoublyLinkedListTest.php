@@ -1,16 +1,16 @@
 <?php
 namespace Test\DataStructure;
 
-use DataStructure\DoubleLinkedList\DoubleLinkedList;
+use DataStructure\DoublyLinkedList\DoublyLinkedList;
 use PHPUnit\Framework\TestCase;
 
-class DoubleLinkedListTest extends TestCase
+class DoublyLinkedListTest extends TestCase
 {
     private $doubleLinkedList;
 
     public function setUp()
     {
-        $this->doubleLinkedList = new DoubleLinkedList();
+        $this->doubleLinkedList = new DoublyLinkedList();
     }
 
     public function testInsertAtFirst()
