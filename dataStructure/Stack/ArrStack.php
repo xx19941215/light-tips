@@ -12,10 +12,17 @@ class ArrStack implements StackInterface
         $this->stack = [];
     }
 
+    public function __get($val)
+    {
+        return $this->$val;
+    }
+
     public function push(string $data = null)
     {
         if (count($this->stack) < $this->limit) {
             array_push($this->stack, $data);
+        } else {
+            throw new \OverflowException('stack is overflow');
         }
     }
 
@@ -24,7 +31,7 @@ class ArrStack implements StackInterface
         if ($this->isEmpty()) {
             throw new \UnderflowException('stack is empty');
         } else {
-            array_pop($this->stack);
+            return array_pop($this->stack);
         }
     }
 

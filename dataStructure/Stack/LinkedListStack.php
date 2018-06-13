@@ -6,15 +6,17 @@ use DataStructure\LinkedList\LinkedList;
 class LinkedListStack implements StackInterface
 {
     private $stack;
+    private $limit;
 
-    public function __construct()
+    public function __construct(int $limit)
     {
+        $this->limit = $limit;
         $this->stack = new LinkedList();
     }
 
     public function top()
     {
-        return $this->stack->getNthNode($this->stack->getSize())->data;
+        return $this->stack->getNthNode($this->stack->getSize() - 1)->data;
     }
 
     public function isEmpty()
@@ -36,6 +38,10 @@ class LinkedListStack implements StackInterface
 
     public function push(string $item)
     {
-        $this->stack->insert($item);
+        if ($this->stack->getSize() < $this->limit) {
+            $this->stack->insert($item);
+        } else {
+            throw new \OverflowException('stack is overflow');
+        }
     }
 }
