@@ -20,13 +20,13 @@
 
 #### 基础数据结构
 
-1. [单链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/LinkedList/LinkedList.php)
-2. [双链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/DoubleLinkedList/DoubleLinkedList.php)
-3. [环形链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/CircularLinkedList/CircularLinkedList.php)
-4. [栈](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Stack/StackInterface.php)
+1. [链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/LinkedList/LinkedList.php)
+   - [双链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/DoubleLinkedList/DoubleLinkedList.php)
+   - [环形链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/CircularLinkedList/CircularLinkedList.php)
+2. [栈](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Stack/StackInterface.php)
    - [链表实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Stack/LinkedListStack.php)
    - [数组实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Stack/ArrStack.php)
-5. [队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/QueueInterface.php)
+3. [队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/QueueInterface.php)
    - [链表实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListQueue.php)
    - [数组实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/ArrQueue.php)
    - [优先队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListPriorityQueue.php)
