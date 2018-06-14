@@ -29,6 +29,8 @@
 5. [队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/QueueInterface.php)
    - [链表实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListQueue.php)
    - [数组实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/ArrQueue.php)
+   - [优先队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListPriorityQueue.php)
+   - [环形队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/CircularQueue.php)
 
 ### PHP
 
