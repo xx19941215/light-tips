@@ -31,6 +31,7 @@
    - [数组实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/ArrQueue.php)
    - [优先队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListPriorityQueue.php)
    - [环形队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/CircularQueue.php)
+   - [双端队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListDeQueue.php)
 
 ### PHP
 
