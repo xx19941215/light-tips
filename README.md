@@ -12,11 +12,11 @@
 ### 数据结构和算法
 
 #### 基础算法
-1. [排序算法之冒泡排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/bubbleSort/bubbleSort.php)
-2. [排序算法之插入排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/insertSort/insertSort.php)
-3. [排序算法之希尔排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/shellSort/shellSort.php)
-4. [排序算法之快速排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/quickSort/quickSort.php)
-5. [排序算法之选择排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/selectSort/selectSort.php)
+1. [冒泡排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/bubbleSort/bubbleSort.php)
+2. [插入排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/insertSort/insertSort.php)
+3. [希尔排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/shellSort/shellSort.php)
+4. [快速排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/quickSort/quickSort.php)
+5. [选择排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/selectSort/selectSort.php)
 
 #### 基础数据结构
 
@@ -31,7 +31,22 @@
    - [数组实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/ArrQueue.php)
    - [优先队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListPriorityQueue.php)
    - [环形队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/CircularQueue.php)
-   - [双端队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListDeQueue.php)
+   - [双端队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListDeQueue.php)   
+   
+#### 一些题目
+
+- 链表
+  - [从头到尾打印链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/1.php)
+  - [链表中倒数第k个节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/2.php)
+  - [反转链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/3.php)
+  - [合并两个排序的链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/4.php)
+  - [复杂链表的复制](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/5.php)
+  - [删除链表中重复的节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/6.php)
+  
+- 栈和队列 
+  - [用两个栈来实现一个队列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/1.php)
+  - [栈的压入、弹出序列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/2.php)
+
 
 ### PHP
 
