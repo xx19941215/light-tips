@@ -42,10 +42,12 @@
   - [合并两个排序的链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/4.php)
   - [复杂链表的复制](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/5.php)
   - [删除链表中重复的节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/6.php)
+  - [两个链表的第一个公共节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/7.php)
+  - [链表中环的入口节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/8.php)
   
 - 栈和队列 
-  - [用两个栈来实现一个队列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/1.php)
-  - [栈的压入、弹出序列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/2.php)
+  - [用两个栈来实现一个队列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/2.php)
+  - [栈的压入、弹出序列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/1.php)
 
 
 ### PHP
