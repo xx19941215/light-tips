@@ -32,7 +32,7 @@ class ArrQueue implements QueueInterface
         if (count($this->queue) >= $this->limit) {
             throw new \OverflowException('queue is full');
         } else {
-            array_unshift($this->queue, $item);
+            array_push($this->queue, $item);
         }
     }
 
