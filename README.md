@@ -32,6 +32,10 @@
    - [优先队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListPriorityQueue.php)
    - [环形队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/CircularQueue.php)
    - [双端队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListDeQueue.php)   
+4. [树](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Tree/Tree.php)
+   - [二叉树](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Tree/BinaryTree.php)
+
+
    
 #### 一些题目
 
