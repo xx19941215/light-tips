@@ -33,17 +33,20 @@ echo "V1 used $used s" . PHP_EOL;
 function bubbleSortV2(&$arr) : void
 {
 	$newn = 0;
-	for ($i = 0, $c = count($arr); $i < $c; $i++) {
-		for ($j = 1; $j < $c; $j ++) {
+	$c = count($arr);
+	$c2 =$c;
+	for ($i = 0; $i < $c; $i++) {
+		for ($j = 1; $j < $c2; $j ++) {
 			if ($arr[$j] < $arr[$j - 1]) {
 				list($arr[$j], $arr[$j - 1]) = array($arr[$j - 1], $arr[$j]);
 				$newn = $j;
 			}
 		}
 		//记录最后一次的交换位置,在此之后的元素在下一轮扫描中均不考虑
-		$c = $newn;
+		$c2 = $newn;
 	}
 }
+
 
 $arr = uniqueRandom(1, 100000, 5000);
 $start = time();
