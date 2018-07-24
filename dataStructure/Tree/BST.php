@@ -70,7 +70,7 @@ class BST
 
         return $node;
     }
-
+    
     public function traverse(BSTNode $node)
     {
         if ($node) {
