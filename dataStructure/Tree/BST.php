@@ -70,15 +70,4 @@ class BST
 
         return $node;
     }
-    
-    public function traverse(BSTNode $node)
-    {
-        if ($node) {
-            if ($node->left) $this->traverse($node->left);
-
-            echo $node->data . PHP_EOL;
-
-            if ($node->right) $this->traverse($node->right);
-        }
-    }
 }

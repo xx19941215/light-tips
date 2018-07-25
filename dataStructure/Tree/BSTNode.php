@@ -8,7 +8,7 @@ class BSTNode
     public $right;
     public $parent;
 
-    public function __construct(int $data = null, BSTNode $node)
+    public function __construct(int $data = null, BSTNode $node = null)
     {
         $this->data = $data;
         $this->left = null;
@@ -96,5 +96,66 @@ class BSTNode
 
             $node->right = null;
         }
+    }
+
+    public function traverse(BSTNode $node, string $type = 'in-order')
+    {
+        switch($type) {
+            case "in-order":
+            $this->inOrder($node);        
+            break;
+
+            case "pre-order":
+            $this->preOrder($node);
+            break;
+
+            case "post-order":
+            $this->postOrder($node);
+            break;
+        }
+    }
+
+    public function preOrder(BSTNode $node)
+    {
+        if ($node) {
+            echo $node->data . PHP_EOL;
+            if ($node->left) $this->traverse($node->left, 'pre-order');
+            if ($node->right) $this->traverse($node->right, 'pre-order');
+        }
+    }
+
+    public function inOrder(BSTNode $node)
+    {
+        if ($node) {
+            if ($node->left) $this->traverse($node->left, 'in-order');
+            echo $node->data . PHP_EOL;
+            if ($node->right) $this->traverse($node->right, 'in-order');
+        }
+    }
+
+    public function postOrder(BSTNode $node)
+    {
+        if ($node) {
+            if ($node->left) $this->traverse($node->left, 'post-order');
+            if ($node->right) $this->traverse($node->right, 'post-order');
+            echo $node->data . PHP_EOL;
+        }
+    }
+
+    public function traverseInOrder()
+    {
+        $traverse = [];
+
+        if ($node = $this->left) {
+            $traverse = array_merge($traverse, $node->traverseInOrder());
+        }
+
+        array_push($traverse, $this->data);
+
+        if ($node = $this->right) {
+            $traverse = array_merge($traverse, $node->traverseInOrder());
+        }
+
+        return $traverse;
     }
 }
