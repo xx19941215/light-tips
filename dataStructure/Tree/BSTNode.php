@@ -98,49 +98,39 @@ class BSTNode
         }
     }
 
-    public function traverse(BSTNode $node, string $type = 'in-order')
+    public function traversePreOrder()
     {
-        switch($type) {
-            case "in-order":
-            $this->inOrder($node);        
-            break;
+        $traverse = [];
+        array_push($traverse, $this->data);
 
-            case "pre-order":
-            $this->preOrder($node);
-            break;
-
-            case "post-order":
-            $this->postOrder($node);
-            break;
+        if ($node = $this->left) {
+            $traverse = array_merge($traverse, $node->traversePreOrder());
         }
+
+        if ($node = $this->right) {
+            $traverse = array_merge($traverse, $node->traversePreOrder());
+        }
+
+        return $traverse;
     }
 
-    public function preOrder(BSTNode $node)
+    public function traversePostOrder()
     {
-        if ($node) {
-            echo $node->data . PHP_EOL;
-            if ($node->left) $this->traverse($node->left, 'pre-order');
-            if ($node->right) $this->traverse($node->right, 'pre-order');
+        $traverse = [];
+        if ($node = $this->left) {
+            $traverse = array_merge($traverse, $node->traverseInOrder());
         }
+
+        
+        if ($node = $this->right) {
+            $traverse = array_merge($traverse, $node->traverseInOrder());
+        }
+
+        array_push($traverse, $this->data);
+
+        return $traverse;
     }
 
-    public function inOrder(BSTNode $node)
-    {
-        if ($node) {
-            if ($node->left) $this->traverse($node->left, 'in-order');
-            echo $node->data . PHP_EOL;
-            if ($node->right) $this->traverse($node->right, 'in-order');
-        }
-    }
-
-    public function postOrder(BSTNode $node)
-    {
-        if ($node) {
-            if ($node->left) $this->traverse($node->left, 'post-order');
-            if ($node->right) $this->traverse($node->right, 'post-order');
-            echo $node->data . PHP_EOL;
-        }
-    }
 
     public function traverseInOrder()
     {
