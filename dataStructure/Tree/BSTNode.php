@@ -118,12 +118,12 @@ class BSTNode
     {
         $traverse = [];
         if ($node = $this->left) {
-            $traverse = array_merge($traverse, $node->traverseInOrder());
+            $traverse = array_merge($traverse, $node->traversePostOrder());
         }
 
-        
+
         if ($node = $this->right) {
-            $traverse = array_merge($traverse, $node->traverseInOrder());
+            $traverse = array_merge($traverse, $node->traversePostOrder());
         }
 
         array_push($traverse, $this->data);
@@ -148,4 +148,92 @@ class BSTNode
 
         return $traverse;
     }
+
+    public function traversePreOrderNotRecursive()
+    {
+        $traverse = [];
+
+        $stack = new \SplStack();
+
+        $currentNode = $this;
+
+        while ($currentNode || !$stack->isEmpty()) {
+            if ($currentNode) {
+                $stack->push($currentNode);
+                array_push($traverse, $currentNode->data);
+                $currentNode = $currentNode->left;
+            } else {
+                $currentNode = $stack->pop();
+                $currentNode = $currentNode->right;
+            }
+        }
+
+        return $traverse;
+    }
+
+    public function traverseInOrderNotRecursive()
+    {
+        $traverse = [];
+
+        $stack = new \SplStack();
+
+        $currentNode = $this;
+
+        while ($currentNode || !$stack->isEmpty()) {
+            if ($currentNode) {
+                $stack->push($currentNode);
+                $currentNode = $currentNode->left;
+            } else {
+                $currentNode = $stack->pop();
+                array_push($traverse, $currentNode->data);
+                $currentNode = $currentNode->right;
+            }
+        }
+
+        return $traverse;
+    }
+
+    /**
+     * 要保证根结点在左孩子和右孩子访问之后才能访问，因此对于任一结点P，先将其入栈。
+     * 如果P不存在左孩子和右孩子，则可以直接访问它；
+     * 或者P存在左孩子或者右孩子，但是其左孩子和右孩子都已被访问过了，则同样可以直接访问该结点。
+     * 若非上述两种情况，则将P的右孩子和左孩子依次入栈，这样就保证了每次取栈顶元素的时候，
+     * 左孩子在右孩子前面被访问，左孩子和右孩子都在根结点前面被访问。
+     */
+    public function traversePostOrderNotRecursive()
+    {
+        $traverse = [];
+
+        $stack = new \SplStack();
+
+        $currentNode = null;
+
+        $prev = null;
+
+        $stack->push($this);
+
+        while (!$stack->isEmpty()) {
+            $currentNode = $stack->top();
+            if (($currentNode->left === null
+                && $currentNode->right === null) || ($prev != null && ($prev === $currentNode->left || $prev === $currentNode->right))) {
+                array_push($traverse, $currentNode->data);
+                $prev = $currentNode;
+                $stack->pop();
+            } else {
+                if ($currentNode->right != null) {
+                    $stack->push($currentNode->right);
+                }
+
+                if ($currentNode->left != null) {
+                    $stack->push($currentNode->left);
+                }
+            }
+        }
+
+        return $traverse;
+    }
+
+    /**
+     * 层次遍历二叉树
+     */
 }

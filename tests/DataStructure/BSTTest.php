@@ -24,7 +24,7 @@ class BSTTest extends TestCase
         $this->assertInstanceOf(BSTNode::class, $this->bst->search(20));
     }
 
-    public function testInOrder()
+    public function testTraverseInOrder()
     {
         $this->bst->insert(23);
         $this->bst->insert(15);
@@ -34,5 +34,65 @@ class BSTTest extends TestCase
         $this->bst->insert(25);
 
         $this->assertEquals([10,15,16,20,21,23,25], $this->bst->root->traverseInOrder());
+    }
+
+    public function testTraversePreOrder()
+    {
+        $this->bst->insert(23);
+        $this->bst->insert(15);
+        $this->bst->insert(10);
+        $this->bst->insert(16);
+        $this->bst->insert(21);
+        $this->bst->insert(25);
+
+        $this->assertEquals([20, 15, 10, 16, 23, 21, 25], $this->bst->root->traversePreOrder());
+    }
+
+    public function testTraversePostOrder()
+    {
+        $this->bst->insert(23);
+        $this->bst->insert(15);
+        $this->bst->insert(10);
+        $this->bst->insert(16);
+        $this->bst->insert(21);
+        $this->bst->insert(25);
+
+        $this->assertEquals([10, 16, 15, 21, 25, 23, 20], $this->bst->root->traversePostOrder());
+    }
+
+    public function testTraverseInOrderNotRecursive()
+    {
+        $this->bst->insert(23);
+        $this->bst->insert(15);
+        $this->bst->insert(10);
+        $this->bst->insert(16);
+        $this->bst->insert(21);
+        $this->bst->insert(25);
+
+        $this->assertEquals([10,15,16,20,21,23,25], $this->bst->root->traverseInOrderNotRecursive());
+    }
+
+    public function testTraversePreOrderNotRecursive()
+    {
+        $this->bst->insert(23);
+        $this->bst->insert(15);
+        $this->bst->insert(10);
+        $this->bst->insert(16);
+        $this->bst->insert(21);
+        $this->bst->insert(25);
+
+        $this->assertEquals([20, 15, 10, 16, 23, 21, 25], $this->bst->root->traversePreOrderNotRecursive());
+    }
+
+    public function testTraversePostOrderNotRecursive()
+    {
+        $this->bst->insert(23);
+        $this->bst->insert(15);
+        $this->bst->insert(10);
+        $this->bst->insert(16);
+        $this->bst->insert(21);
+        $this->bst->insert(25);
+
+        $this->assertEquals([10, 16, 15, 21, 25, 23, 20], $this->bst->root->traversePostOrderNotRecursive());
     }
 }
