@@ -149,6 +149,9 @@ class BSTNode
         return $traverse;
     }
 
+    /**
+     * 前序非递归遍历
+     */
     public function traversePreOrderNotRecursive()
     {
         $traverse = [];
@@ -158,19 +161,31 @@ class BSTNode
         $currentNode = $this;
 
         while ($currentNode || !$stack->isEmpty()) {
-            if ($currentNode) {
+            while($currentNode) {
                 $stack->push($currentNode);
                 array_push($traverse, $currentNode->data);
                 $currentNode = $currentNode->left;
-            } else {
-                $currentNode = $stack->pop();
-                $currentNode = $currentNode->right;
             }
+            
+            $currentNode = $stack->pop();
+            $currentNode = $currentNode->right;
+            //另一种写法
+            // if ($currentNode) {
+            //     $stack->push($currentNode);
+            //     array_push($traverse, $currentNode->data);
+            //     $currentNode = $currentNode->left;
+            // } else {
+            //     $currentNode = $stack->pop();
+            //     $currentNode = $currentNode->right;
+            // }
         }
 
         return $traverse;
     }
 
+    /**
+     * 中序非递归遍历
+     */
     public function traverseInOrderNotRecursive()
     {
         $traverse = [];
@@ -180,20 +195,30 @@ class BSTNode
         $currentNode = $this;
 
         while ($currentNode || !$stack->isEmpty()) {
-            if ($currentNode) {
+            while ($currentNode) {
                 $stack->push($currentNode);
                 $currentNode = $currentNode->left;
-            } else {
-                $currentNode = $stack->pop();
-                array_push($traverse, $currentNode->data);
-                $currentNode = $currentNode->right;
             }
+            
+            $currentNode = $stack->pop();
+            array_push($traverse, $currentNode->data);
+            $currentNode = $currentNode->right;
+            //另一种写法
+            // if ($currentNode) {
+            //     $stack->push($currentNode);
+            //     $currentNode = $currentNode->left;
+            // } else {
+            //     $currentNode = $stack->pop();
+            //     array_push($traverse, $currentNode->data);
+            //     $currentNode = $currentNode->right;
+            // }
         }
 
         return $traverse;
     }
 
     /**
+     * 后序非递归遍历
      * 要保证根结点在左孩子和右孩子访问之后才能访问，因此对于任一结点P，先将其入栈。
      * 如果P不存在左孩子和右孩子，则可以直接访问它；
      * 或者P存在左孩子或者右孩子，但是其左孩子和右孩子都已被访问过了，则同样可以直接访问该结点。
