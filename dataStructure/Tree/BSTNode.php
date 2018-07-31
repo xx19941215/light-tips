@@ -233,7 +233,4 @@ class BSTNode
         return $traverse;
     }
 
-    /**
-     * 层次遍历二叉树
-     */
 }

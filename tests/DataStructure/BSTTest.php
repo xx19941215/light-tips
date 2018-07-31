@@ -95,4 +95,19 @@ class BSTTest extends TestCase
 
         $this->assertEquals([10, 16, 15, 21, 25, 23, 20], $this->bst->root->traversePostOrderNotRecursive());
     }
+
+    public function testDelete()
+    {
+        $this->bst->insert(23);
+        $this->bst->insert(15);
+        $this->bst->insert(10);
+        $this->bst->insert(16);
+        $this->bst->insert(21);
+        $this->bst->insert(25);
+
+        $this->bst->remove(16);
+
+        $this->assertEquals([10, 15, 20, 21, 23, 25], $this->bst->root->traverseInOrder());
+    }
+
 }
