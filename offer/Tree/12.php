@@ -11,7 +11,55 @@
     }
 }*/
 
+/**
+ * 当我们在打印某一行的结点时，把下一层的结点保存到相应的栈中。
+ * 如果当前打印的是奇数层，则先保存左子结点再保存右子结点到一个栈中；
+ * 如果当前打印的是偶数层，则先保存右子结点再保存左子结点到另一个栈中。 
+ */
 function MyPrint($pRoot)
 {
-    // write code here
+    if (empty($pRoot)) return [];
+    $cur = 0;
+    $next = 1;
+    $stack[0] = [];
+    $stack[1] = [];
+    array_push($stack[0], $pRoot);
+    $i = 0;
+    $return = [];
+    $return[0] = [];
+
+    while (!empty($stack[$cur]) || !empty($stack[$next])) {
+        $top = array_pop($stack[$cur]);
+        array_push($return[$i], $top->val);
+
+        if ($cur == 0) {
+            if ($left = $top->left) {
+                array_push($stack[$next], $left);
+            }
+
+            if ($right = $top->right) {
+                array_push($stack[$next], $right);
+            }
+        } else {
+            if ($right = $top->right) {
+                array_push($stack[$next], $right);
+            }
+
+            if ($left = $top->left) {
+                array_push($stack[$next], $left);
+            }
+        }
+
+        if (empty($stack[$cur])) {
+            $cur = 1 - $cur;
+            $next = 1 - $next;
+            if (!empty($stack[0]) || !empty($stack[1])) {
+                $i++;
+                $return[$i] = [];
+            }
+        }
+    }
+
+    return $return;
+
 }
