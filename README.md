@@ -39,7 +39,9 @@
 
 
    
-#### 一些题目
+#### 《剑指Offer》
+
+> 先用PHP解答一遍，稍后Javascript版本的奉上
 
 - 链表
   - [从头到尾打印链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/1.php)
@@ -54,6 +56,23 @@
 - 栈和队列 
   - [用两个栈来实现一个队列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/2.php)
   - [栈的压入、弹出序列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/1.php)
+
+- 树
+  - [重建二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/1.php)
+  - [树的子结构](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/2.php)
+  - [树的镜像](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/3.php)
+  - [从上往下打印二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/4.php)
+  - [二叉搜索树的后序序列](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/5.php)
+  - [二叉树中和为某一值的路径](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/6.php)
+  - [二叉搜索树与双向链表](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/7.php)
+  - [二叉树的深度](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/8.php)
+  - [平衡二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/9.php)
+  - [二叉树的下一个结点](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/10.php)
+  - [对称的二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/11.php)
+  - [按之字形顺序打印二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/12.php)
+  - [把二叉树打印成多行](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/13.php)
+  - [序列化二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/14.php)
+  - [二叉搜索树的第k个结点](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/15.php)
 
 
 ### PHP
@@ -73,9 +92,10 @@
 6. [PHP最佳实践之异常和错误](https://github.com/xx19941215/webBlog/issues/11)
 7. [PHP最佳实践之上线准备](https://github.com/xx19941215/webBlog/issues/12)
 
-### MYSQL
-1. [MySQL索引相关问题总结](https://github.com/xx19941215/webBlog/issues/13)
 
 ### Javascript
 1. [Javascript引擎内部的三种抽象操作](https://github.com/xx19941215/webBlog/issues/9)
 2. [彻底弄懂Javascript闭包](https://github.com/xx19941215/webBlog/issues/10)
+
+### MYSQL
+1. [MySQL索引相关问题总结](https://github.com/xx19941215/webBlog/issues/13)
