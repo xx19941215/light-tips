@@ -11,7 +11,7 @@
 
 > 收藏请点star，如发现有错误欢迎PR
 
-> 如果觉得本Repo对您的学习有帮助，欢迎手机扫一扫领取Alipay的合作红包😹
+> 如果各位老铁觉得本Repo对您的学习有帮助，欢迎手机扫一扫领取Alipay的合作红包🤣
 
 <h3 align="center">Special Sponsors</h3>
 
