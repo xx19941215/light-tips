@@ -51,3 +51,10 @@ bubbleSortV2($arr);
 $end = time();
 $used = $end - $start;
 echo "V2 used $used s" . PHP_EOL;
+
+$arr = uniqueRandom(1, 100000, 5000);
+$start = time();
+asort($arr);
+$end = time();
+$used = $end - $start;
+echo "asort() used $used s" . PHP_EOL;

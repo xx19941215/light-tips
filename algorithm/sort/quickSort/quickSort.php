@@ -29,11 +29,11 @@ function quickSort(&$arr)
 }
 
 
-$arr = uniqueRandom(1, 100, 10);
+$arr = uniqueRandom(1, 100000, 5000);
 $start = time();
 quickSort($arr);
 $end = time();
 $used = $end - $start;
 echo "used $used s" . PHP_EOL;
 
-var_dump(quickSort($arr));
+// var_dump(quickSort($arr));
