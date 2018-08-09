@@ -19,7 +19,7 @@
 3. [希尔排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/shellSort/shellSort.php)
 4. [快速排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/quickSort/quickSort.php)
 5. [选择排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/selectSort/selectSort.php)
-6. [堆排序](algorithm/sort/selectSort/selectSort.php)
+6. [堆排序](algorithm/sort/heapSort/heapSort.php)
 
 
 #### 基础数据结构
