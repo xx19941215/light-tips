@@ -11,14 +11,6 @@
 
 > 收藏请点star，如发现有错误欢迎PR
 
-> 如果各位老铁觉得本Repo对您的学习有帮助，欢迎手机扫一扫领取Alipay的合作红包🤣
-
-<h3 align="center">Special Sponsors</h3>
-
-<p align="center">
-    <img width="260px" src="https://segmentfault.com/img/bVbeZZc">
-</p>
-
 ### 数据结构和算法
 
 #### 基础算法
@@ -27,6 +19,8 @@
 3. [希尔排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/shellSort/shellSort.php)
 4. [快速排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/quickSort/quickSort.php)
 5. [选择排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/selectSort/selectSort.php)
+6. [堆排序](algorithm/sort/selectSort/selectSort.php)
+
 
 #### 基础数据结构
 
@@ -44,6 +38,10 @@
    - [双端队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListDeQueue.php)   
 4. [树](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Tree/Tree.php)
    - [二叉树](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Tree/BinaryTree.php)
+   - [二叉搜索树](dataStructure/Tree/BST.php)
+
+5. [最大堆](dataStructure/Heap/MaxHeap.php)
+   - [最小堆](dataStructure/Heap/MinHeap.php)
 
 
    
