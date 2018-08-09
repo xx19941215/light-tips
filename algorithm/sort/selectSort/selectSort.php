@@ -27,10 +27,12 @@ function selectSort(&$arr)
 	
 }
 
-$arr = uniqueRandom(1, 100, 10);
+$arr = uniqueRandom(1, 100000, 5000);
 
-$start = time();
+$start = microtime(true);
 selectSort($arr);
-$end = time();
+$end = microtime(true);
 $used = $end - $start;
 echo "used $used s" . PHP_EOL;
+
+//used 1.1448910236359 s

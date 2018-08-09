@@ -30,10 +30,10 @@ function quickSort(&$arr)
 
 
 $arr = uniqueRandom(1, 100000, 5000);
-$start = time();
+$start = microtime(true);
 quickSort($arr);
-$end = time();
+$end = microtime(true);
 $used = $end - $start;
 echo "used $used s" . PHP_EOL;
 
-// var_dump(quickSort($arr));
+//used 0.027179002761841 s

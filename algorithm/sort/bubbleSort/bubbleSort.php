@@ -24,11 +24,12 @@ function bubbleSort(&$arr) : void
 }
 
 $arr = uniqueRandom(1, 100000, 5000);
-$start = time();
+$start = microtime(true);
 bubbleSort($arr);
-$end = time();
+$end = microtime(true);
 $used = $end - $start;
 echo "V1 used $used s" . PHP_EOL;
+//V1 used 4.3315870761871 s
 
 function bubbleSortV2(&$arr) : void
 {
@@ -46,15 +47,17 @@ function bubbleSortV2(&$arr) : void
 }
 
 $arr = uniqueRandom(1, 100000, 5000);
-$start = time();
+$start = microtime(true);
 bubbleSortV2($arr);
-$end = time();
+$end = microtime(true);
 $used = $end - $start;
 echo "V2 used $used s" . PHP_EOL;
+//V2 used 2.4826340675354 s
 
 $arr = uniqueRandom(1, 100000, 5000);
-$start = time();
+$start = microtime(true);
 asort($arr);
-$end = time();
+$end = microtime(true);
 $used = $end - $start;
 echo "asort() used $used s" . PHP_EOL;
+//asort() used 0.00070095062255859 s

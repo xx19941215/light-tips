@@ -21,11 +21,11 @@ function shellSort(&$arr)
 }
 
 
-$arr = uniqueRandom(1, 1000, 100);
-$start = time();
+$arr = uniqueRandom(1, 100000, 5000);
+$start = microtime(true);
 shellSort($arr);
-$end = time();
+$end = microtime(true);
 $used = $end - $start;
 echo "used $used s" . PHP_EOL;
 
-var_dump($arr);
+//used 2.6073348522186 s
