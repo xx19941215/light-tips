@@ -29,11 +29,47 @@ function quickSort(&$arr)
 }
 
 
-$arr = uniqueRandom(1, 100000, 5000);
+$arr = uniqueRandom(1, 1000, 1000);
 $start = microtime(true);
-quickSort($arr);
+qSort($arr, 0, count($arr) - 1);
 $end = microtime(true);
 $used = $end - $start;
 echo "used $used s" . PHP_EOL;
+var_dump($arr);
 
 //used 0.027179002761841 s
+
+
+//https://blog.csdn.net/ricardo18/article/details/78867143
+function qSort(array &$arr, int $p, int $r)
+{
+	if ($p < $r) {
+		$q = partition($arr, $p, $r);
+    	qSort($arr, $p, $q);
+    	qSort($arr, $q+1, $r);
+	}
+}
+
+function partition(array &$arr, int $p, int $r)
+{
+	$pivot = $arr[$p];
+	$i = $p - 1;
+	$j = $r + 1;	
+
+	while(true) {
+		do {
+			$i++;
+		} while ($arr[$i] < $pivot);
+
+		do {
+			$j--;
+		} while ($arr[$j] > $pivot);
+
+		if ($i < $j) {
+			list($arr[$i], $arr[$j]) = [$arr[$j], $arr[$i]];
+		} else {
+			return $j;	
+		}
+
+	}
+}
