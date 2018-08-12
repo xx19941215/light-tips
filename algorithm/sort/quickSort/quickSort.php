@@ -29,15 +29,12 @@ function quickSort(&$arr)
 }
 
 
-$arr = uniqueRandom(1, 1000, 1000);
+$arr = uniqueRandom(1, 10000000, 1000000);
 $start = microtime(true);
 qSort($arr, 0, count($arr) - 1);
 $end = microtime(true);
 $used = $end - $start;
-echo "used $used s" . PHP_EOL;
-var_dump($arr);
-
-//used 0.027179002761841 s
+echo "qSortV1 used $used s" . PHP_EOL;
 
 
 //https://blog.csdn.net/ricardo18/article/details/78867143
@@ -73,3 +70,67 @@ function partition(array &$arr, int $p, int $r)
 
 	}
 }
+
+function qSortV2(array &$arr, int $p, int $r)
+{
+	if ($p < $r) {
+		$q = partitionV2($arr, $p, $r);
+    	qSort($arr, $p, $q);
+    	qSort($arr, $q+1, $r);
+	}
+}
+
+function partitionV2(array &$arr, int $p, int $r)
+{
+	//使用三数取中优化
+	retrivePivot($arr, $p, $r);
+	$pivot = $arr[$r - 1];
+	$i = $p - 1;
+	$j = $r + 1;
+
+	while(true) {
+		do {
+			$i++;
+		} while ($arr[$i] < $pivot);
+
+		do {
+			$j--;
+		} while ($arr[$j] > $pivot);
+
+		if ($i < $j) {
+			list($arr[$i], $arr[$j]) = [$arr[$j], $arr[$i]];
+		} else {
+			return $j;	
+		}
+
+	}
+
+}
+
+//优化：三数取中 克服固定中枢下有序数组排序慢的情况，但是数组值重复的情况下仍然无效
+//https://blog.csdn.net/insistgogo/article/details/7785038#
+//https://www.cnblogs.com/chengxiao/p/6262208.html
+function retrivePivot(&$arr, int $p, int $r)
+{
+	$mid = intval(($p + $r) / 2);	
+	if ($arr[$p] > $arr[$mid]) {
+		list($arr[$p], $arr[$mid]) = [$arr[$mid], $arr[$p]];
+	}
+
+	if ($arr[$p] > $arr[$r]) {
+		list($arr[$p], $arr[$r]) = [$arr[$r], $arr[$p]];
+	}
+
+	if ($arr[$r] < $arr[$mid]) {
+		list($arr[$r], $arr[$mid]) = [$arr[$mid], $arr[$r]];
+	}
+
+	list($arr[$r - 1], $arr[$mid]) = [$arr[$mid], $arr[$r]];
+}
+
+$arr2 = array_fill(0, 1000000, 1);
+$start = microtime(true);
+qSortV2($arr2, 0, count($arr2) - 1);
+$end = microtime(true);
+$used = $end - $start;
+echo "qSortV2 used $used s" . PHP_EOL;
