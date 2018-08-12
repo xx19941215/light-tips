@@ -18,11 +18,9 @@ function insertSort(&$arr) : void
 	}
 }
 
-$arr = uniqueRandom(1, 100000, 5000);
+$arr = uniqueRandom(1, 100000, 100);
 $start = microtime(true);
 insertSort($arr);
 $end = microtime(true);
 $used = $end - $start;
-echo "used $used s" . PHP_EOL;
-
-//used 2.8154721260071 s
+echo "insertSort used $used s" . PHP_EOL;
