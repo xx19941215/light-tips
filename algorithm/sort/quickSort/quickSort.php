@@ -133,7 +133,7 @@ function retrivePivot(&$arr, int $p, int $r)
 	return $arr[$r - 1];
 }
 
-$arr2 = randomArr(1, 100000, 10000, true, true);
+$arr2 = randomArr(1, 1000000, 500000, false, false);
 $start = microtime(true);
 qSortV2($arr2, 0, count($arr2) - 1);
 $end = microtime(true);
