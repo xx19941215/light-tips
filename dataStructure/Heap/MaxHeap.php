@@ -44,16 +44,16 @@ class MaxHeap
     {
         //待上浮元素的临时位置
         $tempPos = $this->count - 1;    
-        //根据完全二叉树性质找到副节点的位置
-        $parentPos = intval($tempPos / 2);
+        //根据完全二叉树性质找到父节点的位置
+        $parentPos = intval(($tempPos - 1) / 2);
 
         while ($tempPos > 0 && $this->heap[$parentPos] < $this->heap[$tempPos]) {
-            //当不是根节点并且副节点的值小于临时节点的值，就交换两个节点的值
+            //当不是根节点并且父节点的值小于临时节点的值，就交换两个节点的值
             $this->swap($parentPos, $tempPos);
             //重置上浮元素的位置
             $tempPos = $parentPos;
             //重置父节点的位置
-            $parentPos = intval($tempPos / 2);
+            $parentPos = intval(($tempPos - 1) / 2);
         }
     }
 
