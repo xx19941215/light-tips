@@ -94,7 +94,7 @@ class MaxHeap
         }
 
         if ($right < $this->count && $this->heap[$largest] < $this->heap[$right]) {
-            //如果右孩子大于最大值，重置最大值的位置为左孩子
+            //如果右孩子大于最大值，重置最大值的位置右孩子
             $largest = $right;
         }
 

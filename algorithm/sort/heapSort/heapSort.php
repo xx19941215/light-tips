@@ -1,4 +1,7 @@
 <?php
+/**
+ * 堆排序是堆选择排序的改进
+ */
 require_once __DIR__ . '/../uniqueRandom.php';
 
 function heapSort(&$arr)

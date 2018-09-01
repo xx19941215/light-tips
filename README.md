@@ -21,6 +21,12 @@
 5. [选择排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/selectSort/selectSort.php)
 6. [堆排序](algorithm/sort/heapSort/heapSort.php)
 
+7. [桶排序](algorithm/sort/bucketSort/bucketSort.php)
+
+8. [基数排序](algorithm/sort/radixSort/radixSort.php)
+
+
+
 
 #### 基础数据结构
 

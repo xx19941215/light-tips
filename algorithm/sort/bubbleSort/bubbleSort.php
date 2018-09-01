@@ -5,21 +5,23 @@
  * 原理：两两相邻比较，如果反序就交换，否则不交换
  * 时间复杂度：最坏 O(n2) 平均 O(n2)
  * 空间复杂度：O(1)
+ * 什么时候使用：当所有的数据位于单向链表中 
  */
 
 require_once __DIR__ . '/../uniqueRandom.php';
 
 function bubbleSort(&$arr) : void
 {
-	$swapped = false;
 	for ($i = 0, $c = count($arr); $i < $c; $i++) {
-		for ($j = 0; $j < $c - 1; $j ++) {
+		$swapped = false;
+		for ($j = 0; $j < $c - 1; $j++) {
 			if ($arr[$j + 1] < $arr[$j]) {
 				list($arr[$j], $arr[$j + 1]) = array($arr[$j + 1], $arr[$j]);
+				$swapped = true;
 			}
 		}
 
-		if ($swapped) break; //第一遍没有发生交换，算法结束
+		if (!$swapped) break; //没有发生交换，算法结束
 	}
 }
 
@@ -33,16 +35,33 @@ echo "V1 used $used s" . PHP_EOL;
 
 function bubbleSortV2(&$arr) : void
 {
-	$newn = 0;
 	for ($i = 0, $c = count($arr); $i < $c; $i++) {
-		for ($j = 1; $j < $c; $j ++) {
-			if ($arr[$j] < $arr[$j - 1]) {
-				list($arr[$j], $arr[$j - 1]) = array($arr[$j - 1], $arr[$j]);
-				$newn = $j;
+		$swapped = false;
+		for ($j = 0; $j < $c - $i - 1; $j++) {
+			if ($arr[$j + 1] < $arr[$j]) {
+				list($arr[$j], $arr[$j + 1]) = array($arr[$j + 1], $arr[$j]);
+				$swapped = true;
+			}
+
+		}
+		if (!$swapped) break; //没有发生交换，算法结束
+	}
+}
+
+function bubbleSortV3(&$arr) : void
+{
+    $bound = count($arr) - 1;
+	for ($i = 0, $c = count($arr); $i < $c; $i++) {
+		$swapped = false;
+		for ($j = 0; $j < $bound; $j++) {
+			if ($arr[$j + 1] < $arr[$j]) {
+				list($arr[$j], $arr[$j + 1]) = array($arr[$j + 1], $arr[$j]);
+				$swapped = true;
+				$newBound = $j;
 			}
 		}
-		//记录最后一次的交换位置,在此之后的元素在下一轮扫描中均不考虑
-		$c = $newn;
+		$bound = $newBound;
+		if (!$swapped) break; //没有发生交换，算法结束
 	}
 }
 
