@@ -20,7 +20,7 @@
     2. [插入排序](algorithm/sort/insertSort/insertSort.php)
   - [希尔排序(插入排序的改进)](algorithm/sort/shellSort/shellSort.php)
   - [选择排序](algorithm/sort/selectionSort/selectionSort.php)
-  - [堆排序(选择排序的改进)](algorithm/sort/heapSort/heapSort.php)
+  - [堆排序(选择排序的改进)](algorithm/sort/heapSort/heapSort.php)
   - [归并排序](algorithm/sort/mergeSort/mergeSort.php)
   - [桶排序](algorithm/sort/bucketSort/bucketSort.php)
   - [基数排序](algorithm/sort/radixSort/radixSort.php)
@@ -31,16 +31,16 @@
 
 |算法|最快时间复杂度|平均时间复杂度|最坏时间复杂度|空间复杂度|是否稳定
 |--|--|--|--|--|--|
-|冒泡排序|Ω(n)|Θ(n2)|O(n2)|O(1)|稳定
-|插入排序|Ω(n)|Θ(n2)|O(n2)|O(1)|稳定
-|希尔排序|Ω(nlogn)|Θ(n(log(n))2)|O(n(log(n))2)|O(1)|不稳定
+|冒泡排序|Ω(n)|Θ(n2)|O(n2)|O(1)|稳定
+|插入排序|Ω(n)|Θ(n2)|O(n2)|O(1)|稳定
+|希尔排序|Ω(nlogn)|Θ(n(log(n))2)|O(n(log(n))2)|O(1)|不稳定
 |选择排序|Ω(n2)|Θ(n2)|O(n2)|O(1)|不稳定
 |堆排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(1)|不稳定
 |归并排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(n)|稳定
 |快速排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(n)|不稳定
 |基数排序|Ω(n+b)|Θ(n+b)|O(n+b)|O(n+k)|稳定
 
-> O表示上界(小于等于) Ω表示下界(大于等于) Θ表示即是上界也是下界(等于)
+> O表示上界(小于等于)Ω表示下界(大于等于)Θ表示即是上界也是下界(等于)
 
 
 #### 数据结构
