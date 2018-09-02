@@ -13,37 +13,52 @@
 
 ### 数据结构和算法
 
-#### 基础算法
-1. [冒泡排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/bubbleSort/bubbleSort.php)
-2. [插入排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/insertSort/insertSort.php)
-3. [希尔排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/shellSort/shellSort.php)
-4. [快速排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/quickSort/quickSort.php)
-5. [选择排序](https://github.com/xx19941215/webBlog/blob/master/algorithm/sort/selectSort/selectSort.php)
-6. [堆排序](algorithm/sort/heapSort/heapSort.php)
+#### 算法
+- 排序
+  - 简单排序
+    1. [冒泡排序](algorithm/sort/bubbleSort/bubbleSort.php)
+    2. [插入排序](algorithm/sort/insertSort/insertSort.php)
+  - [希尔排序(插入排序的改进)](algorithm/sort/shellSort/shellSort.php)
+  - [选择排序](algorithm/sort/selectionSort/selectionSort.php)
+  - [堆排序(选择排序的改进)](algorithm/sort/heapSort/heapSort.php)
+  - [归并排序](algorithm/sort/mergeSort/mergeSort.php)
+  - [桶排序](algorithm/sort/bucketSort/bucketSort.php)
+  - [基数排序](algorithm/sort/radixSort/radixSort.php)
+  - [快速排序](algorithm/sort/quickSort/quickSort.php)
 
-7. [桶排序](algorithm/sort/bucketSort/bucketSort.php)
+- 查找
+  - Todo
 
-8. [基数排序](algorithm/sort/radixSort/radixSort.php)
+|算法|最快时间复杂度|平均时间复杂度|最坏时间复杂度|空间复杂度|是否稳定
+|--|--|--|--|--|--|
+|冒泡排序|Ω(n)|Θ(n2)|O(n2)|O(1)|稳定
+|插入排序|Ω(n)|Θ(n2)|O(n2)|O(1)|稳定
+|希尔排序|Ω(nlogn)|Θ(n(log(n))2)|O(n(log(n))2)|O(1)|不稳定
+|选择排序|Ω(n2)|Θ(n2)|O(n2)|O(1)|不稳定
+|堆排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(1)|不稳定
+|归并排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(n)|稳定
+|快速排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(n)|不稳定
+|基数排序|Ω(n+b)|Θ(n+b)|O(n+b)|O(n+k)|稳定
+
+> O表示上界(小于等于) Ω表示下界(大于等于) Θ表示即是上界也是下界(等于)
 
 
+#### 数据结构
 
-
-#### 基础数据结构
-
-1. [链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/LinkedList/LinkedList.php)
-   - [双链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/DoubleLinkedList/DoubleLinkedList.php)
-   - [环形链表](https://github.com/xx19941215/webBlog/blob/master/dataStructure/CircularLinkedList/CircularLinkedList.php)
-2. [栈](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Stack/StackInterface.php)
-   - [链表实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Stack/LinkedListStack.php)
-   - [数组实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Stack/ArrStack.php)
-3. [队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/QueueInterface.php)
-   - [链表实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListQueue.php)
-   - [数组实现](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/ArrQueue.php)
-   - [优先队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListPriorityQueue.php)
-   - [环形队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/CircularQueue.php)
-   - [双端队列](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Queue/LinkedListDeQueue.php)   
-4. [树](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Tree/Tree.php)
-   - [二叉树](https://github.com/xx19941215/webBlog/blob/master/dataStructure/Tree/BinaryTree.php)
+1. [链表](dataStructure/LinkedList/LinkedList.php)
+   - [双链表](dataStructure/DoubleLinkedList/DoubleLinkedList.php)
+   - [环形链表](dataStructure/CircularLinkedList/CircularLinkedList.php)
+2. [栈](dataStructure/Stack/StackInterface.php)
+   - [链表实现](dataStructure/Stack/LinkedListStack.php)
+   - [数组实现](dataStructure/Stack/ArrStack.php)
+3. [队列](dataStructure/Queue/QueueInterface.php)
+   - [链表实现](dataStructure/Queue/LinkedListQueue.php)
+   - [数组实现](dataStructure/Queue/ArrQueue.php)
+   - [优先队列](dataStructure/Queue/LinkedListPriorityQueue.php)
+   - [环形队列](dataStructure/Queue/CircularQueue.php)
+   - [双端队列](dataStructure/Queue/LinkedListDeQueue.php)   
+4. [树](dataStructure/Tree/Tree.php)
+   - [二叉树](dataStructure/Tree/BinaryTree.php)
    - [二叉搜索树](dataStructure/Tree/BST.php)
 
 5. [最大堆](dataStructure/Heap/MaxHeap.php)
@@ -56,35 +71,35 @@
 > 先用PHP解答一遍，稍后Javascript版本的奉上
 
 - 链表
-  - [从头到尾打印链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/1.php)
-  - [链表中倒数第k个节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/2.php)
-  - [反转链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/3.php)
-  - [合并两个排序的链表](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/4.php)
-  - [复杂链表的复制](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/5.php)
-  - [删除链表中重复的节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/6.php)
-  - [两个链表的第一个公共节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/7.php)
-  - [链表中环的入口节点](https://github.com/xx19941215/webBlog/blob/master/offer/LinkedList/8.php)
+  - [从头到尾打印链表](offer/LinkedList/1.php)
+  - [链表中倒数第k个节点](offer/LinkedList/2.php)
+  - [反转链表](offer/LinkedList/3.php)
+  - [合并两个排序的链表](offer/LinkedList/4.php)
+  - [复杂链表的复制](offer/LinkedList/5.php)
+  - [删除链表中重复的节点](offer/LinkedList/6.php)
+  - [两个链表的第一个公共节点](offer/LinkedList/7.php)
+  - [链表中环的入口节点](offer/LinkedList/8.php)
   
 - 栈和队列 
-  - [用两个栈来实现一个队列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/2.php)
-  - [栈的压入、弹出序列](https://github.com/xx19941215/webBlog/blob/master/offer/Stack&Queue/1.php)
+  - [用两个栈来实现一个队列](offer/Stack&Queue/2.php)
+  - [栈的压入、弹出序列](offer/Stack&Queue/1.php)
 
 - 树
-  - [重建二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/1.php)
-  - [树的子结构](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/2.php)
-  - [树的镜像](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/3.php)
-  - [从上往下打印二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/4.php)
-  - [二叉搜索树的后序序列](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/5.php)
-  - [二叉树中和为某一值的路径](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/6.php)
-  - [二叉搜索树与双向链表](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/7.php)
-  - [二叉树的深度](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/8.php)
-  - [平衡二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/9.php)
-  - [二叉树的下一个结点](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/10.php)
-  - [对称的二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/11.php)
-  - [按之字形顺序打印二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/12.php)
-  - [把二叉树打印成多行](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/13.php)
-  - [序列化二叉树](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/14.php)
-  - [二叉搜索树的第k个结点](https://github.com/xx19941215/webBlog/blob/master/offer/Tree/15.php)
+  - [重建二叉树](offer/Tree/1.php)
+  - [树的子结构](offer/Tree/2.php)
+  - [树的镜像](offer/Tree/3.php)
+  - [从上往下打印二叉树](offer/Tree/4.php)
+  - [二叉搜索树的后序序列](offer/Tree/5.php)
+  - [二叉树中和为某一值的路径](offer/Tree/6.php)
+  - [二叉搜索树与双向链表](offer/Tree/7.php)
+  - [二叉树的深度](offer/Tree/8.php)
+  - [平衡二叉树](offer/Tree/9.php)
+  - [二叉树的下一个结点](offer/Tree/10.php)
+  - [对称的二叉树](offer/Tree/11.php)
+  - [按之字形顺序打印二叉树](offer/Tree/12.php)
+  - [把二叉树打印成多行](offer/Tree/13.php)
+  - [序列化二叉树](offer/Tree/14.php)
+  - [二叉搜索树的第k个结点](offer/Tree/15.php)
 
 
 ### PHP

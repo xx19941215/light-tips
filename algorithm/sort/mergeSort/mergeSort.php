@@ -4,10 +4,12 @@ require_once __DIR__ . '/../uniqueRandom.php';
 
 /**
  * 归并排序
- * 时间复杂度 O(n log n)
+ * 核心：两个有序子序列的归并(function merge)
+ * 时间复杂度任何情况下都是 O(nlogn)
  * 空间复杂度 O(n)
  * 发明人: 约翰·冯·诺伊曼
  * 速度仅次于快速排序，为稳定排序算法，一般用于对总体无序，但是各子项相对有序的数列
+ * 一般不用于内(内存)排序，一般用于外排序
  */
 
 function mergeSort($arr)
@@ -29,6 +31,7 @@ function merge(array $left, array $right)
     $leftIndex = $rightIndex = 0;
     $leftLength = count($left);
     $rightLength = count($right);
+    //临时空间
     $combine = [];
 
     //比较两个指针所在的元素
