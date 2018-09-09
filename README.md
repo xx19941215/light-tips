@@ -17,7 +17,7 @@
 - 排序
   - 简单排序
     1. [冒泡排序](algorithm/sort/bubbleSort/bubbleSort.php)
-    2. [插入排序](algorithm/sort/insertSort/insertSort.php)
+    2. [插入排序](algorithm/sort/insertionSort/insertionSort.php)
   - [希尔排序(插入排序的改进)](algorithm/sort/shellSort/shellSort.php)
   - [选择排序](algorithm/sort/selectionSort/selectionSort.php)
   - [堆排序(选择排序的改进)](algorithm/sort/heapSort/heapSort.php)
@@ -26,8 +26,11 @@
   - [基数排序](algorithm/sort/radixSort/radixSort.php)
   - [快速排序](algorithm/sort/quickSort/quickSort.php)
 
-- 查找
-  - Todo
+- 搜索/查找
+  - 线性搜索
+  - 二分搜索
+  - 插值搜索
+  - 树表查找
 
 |算法|最快时间复杂度|平均时间复杂度|最坏时间复杂度|空间复杂度|是否稳定
 |--|--|--|--|--|--|
@@ -64,6 +67,7 @@
 5. [最大堆](dataStructure/Heap/MaxHeap.php)
    - [最小堆](dataStructure/Heap/MinHeap.php)
 
+6. 图
 
    
 #### 《剑指Offer》

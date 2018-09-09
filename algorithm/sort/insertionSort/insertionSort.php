@@ -11,7 +11,7 @@
  */
 require_once __DIR__ . '/../uniqueRandom.php';
 
-function insertSort(&$arr) : void
+function insertionSort(&$arr) : void
 {
     for ($p = 1, $c = count($arr); $p < $c; $p++) {
 		//摸下一张牌
@@ -27,7 +27,7 @@ function insertSort(&$arr) : void
 
 $arr = uniqueRandom(1, 100000, 5000);
 $start = microtime(true);
-insertSort($arr);
+insertionSort($arr);
 $end = microtime(true);
 $used = $end - $start;
-echo "insertSort used $used s" . PHP_EOL;
+echo "insertionSort used $used s" . PHP_EOL;
