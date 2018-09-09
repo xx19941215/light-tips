@@ -40,7 +40,7 @@
 |选择排序|Ω(n2)|Θ(n2)|O(n2)|O(1)|不稳定
 |堆排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(1)|不稳定
 |归并排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(n)|稳定
-|快速排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(n)|不稳定
+|快速排序|Ω(nlogn)|Θ(nlogn)|O(nlogn)|O(logn)|不稳定
 |基数排序|Ω(n+b)|Θ(n+b)|O(n+b)|O(n+k)|稳定
 
 > O表示上界(小于等于)Ω表示下界(大于等于)Θ表示即是上界也是下界(等于)
