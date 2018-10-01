@@ -14,7 +14,10 @@
         ],
         "psr-4": {
             "DataStructure\\": "dataStructure/"
-        }
+        },
+        "files": [
+            "algorithm/search/functions.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
