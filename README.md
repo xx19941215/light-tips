@@ -30,7 +30,7 @@
   - [线性搜索](algorithm/search/linearSearch.php)
   - 二分搜索
     - [迭代版](algorithm/search/binarySearch.php)
-    - [递归版](algorithm/search/binarySearchRecursion.php)
+    - [递归版](algorithm/search/binarySearchRecursion.php)
   - [插值搜索](algorithm/search/interpolationSearch.php)
   - [指数搜索](algorithm/search/exponentialSearch.php)
   - 树表查找
