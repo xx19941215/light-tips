@@ -16,8 +16,8 @@
 #### 算法
 - 排序
   - 简单排序
-    1. [冒泡排序](algorithm/sort/bubbleSort/bubbleSort.php)
-    2. [插入排序](algorithm/sort/insertionSort/insertionSort.php)
+    - [冒泡排序](algorithm/sort/bubbleSort/bubbleSort.php)
+    - [插入排序](algorithm/sort/insertionSort/insertionSort.php)
   - [希尔排序(插入排序的改进)](algorithm/sort/shellSort/shellSort.php)
   - [选择排序](algorithm/sort/selectionSort/selectionSort.php)
   - [堆排序(选择排序的改进)](algorithm/sort/heapSort/heapSort.php)
@@ -34,6 +34,8 @@
   - [插值搜索](algorithm/search/interpolationSearch.php)
   - [指数搜索](algorithm/search/exponentialSearch.php)
   - 树表查找
+    - [深度优先搜索DFS](algorithm/search/DFS.php)
+    - [广度优先搜索BFS](algorithm/search/BFS.php)
 
 |算法|最快时间复杂度|平均时间复杂度|最坏时间复杂度|空间复杂度|是否稳定
 |--|--|--|--|--|--|

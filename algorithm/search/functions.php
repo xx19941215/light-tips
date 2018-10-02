@@ -29,3 +29,4 @@ if (!function_exists('hashSearch')) {
 }
 
 require_once __DIR__ . '/BFS.php';
+require_once __DIR__ . '/DFS.php';
