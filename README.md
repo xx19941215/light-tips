@@ -73,6 +73,10 @@
    - [最小堆](dataStructure/Heap/MinHeap.php)
 
 6. 图
+   - [深度优先遍历](dataStructure/Graph/Graph.php)
+   - [广度优先遍历](dataStructure/Graph/Graph.php)
+   - [拓扑排序](dataStructure/Graph/Graph.php)
+   - [最短路径之Floyd算法](dataStructure/Graph/Graph.php)
 
    
 #### 《剑指Offer》
