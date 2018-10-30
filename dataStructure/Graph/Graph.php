@@ -1,6 +1,9 @@
 <?php
 namespace DataStructure\Graph;
 
+use DataStructure\Spl\SplPriorityQueue;
+
+
 class Graph
 {
     public static function BFS(&$graph, int $start, array $visited) : \SplQueue
@@ -152,7 +155,7 @@ class Graph
         return $sorted;
     }
 
-    public static function FW(array $graph): array
+    public static function floydWarshall(array $graph): array
     {
         $dist = [];
         $dist = $graph;
@@ -167,6 +170,54 @@ class Graph
         }
 
         return $dist;
+    }
+
+    public static function Dijkstra(array $graph, string $source, string $target)
+    {
+        $dist = [];
+        $prev = [];
+        
+        $queue = new \SplPriorityQueue();
+
+        foreach ($graph as $vertex => $weight) {
+            $dist[$vertex] = PHP_INT_MAX;
+            $prev[$vertex] = null;
+            $queue->insert($vertex, min($weight));
+        }
+
+        $dist[$source] = 0;
+        
+        while (!$queue->isEmpty()) {
+            $current = $queue->extract();
+
+            if (!empty($graph[$current])) {
+                foreach($graph[$current] as $vertex => $weight) {
+                    //如果源点到$vertx的距离大于到源点到$current的距离再加上从$current到$vertex的距离
+                    if ($dist[$current] + $weight < $dist[$vertex]) {
+                        //修正源点到$vertex的最短距离
+                        $dist[$vertex] = $dist[$current] + $weight;
+                        //设置最短距离中的上一个节点
+                        $prev[$vertex] = $current;
+                    }
+                }
+            }
+        }
+
+        $stack = new \SplStack();
+        $distance = 0;
+
+        while(isset($prev[$target]) && $prev[$target]) {
+            $stack->push($target);
+            $distance += $graph[$target][$prev[$target]];
+            $target = $prev[$target];
+        }
+
+        if ($stack->isEmpty()) {
+            return ["distance" => 0, "path" => $stack];
+        } else {
+            $stack->push($source);
+            return ["distance" => $distance, "path" => $stack];
+        }
     }
 }
 

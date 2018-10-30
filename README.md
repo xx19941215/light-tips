@@ -77,11 +77,10 @@
    - [广度优先遍历](dataStructure/Graph/Graph.php)
    - [拓扑排序](dataStructure/Graph/Graph.php)
    - [最短路径之Floyd算法](dataStructure/Graph/Graph.php)
+   - [单源最短路径Dijkstra算法](dataStructure/Graph/Graph.php)
 
    
 #### 《剑指Offer》
-
-> 先用PHP解答一遍，稍后Javascript版本的奉上
 
 - 链表
   - [从头到尾打印链表](offer/LinkedList/1.php)
