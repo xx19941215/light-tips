@@ -27,9 +27,9 @@ class ExpressionChecker
                     $last = $stack->pop();
 
                     if (
-                        $item == '{' && $last != '}' ||
-                        $item == '(' && $last != ')' ||
-                        $item == '[' && $last != ']'
+                        $item == '}' && $last != '{' ||
+                        $item == ')' && $last != '(' ||
+                        $item == ']' && $last != '['
                     )
                         return false;
 
