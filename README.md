@@ -11,6 +11,13 @@
 
 > 收藏请点star，如发现有错误欢迎PR
 
+### Backer and Sponsor
+>jetbrains
+
+<a href="https://www.jetbrains.com/?from=LockGit/gochat" target="_blank">
+<img src="https://github.com/LockGit/gochat/blob/master/architecture/jetbrains-gold-reseller.svg" width="100px" height="100px">
+</a>
+
 ### 数据结构和算法
 
 #### 算法
@@ -112,6 +119,16 @@
   - [把二叉树打印成多行](offer/Tree/13.php)
   - [序列化二叉树](offer/Tree/14.php)
   - [二叉搜索树的第k个结点](offer/Tree/15.php)
+
+### C语言
+
+#### 教程
+1. [PHPer看的C语言入门教程](https://github.com/xx19941215/light-c)
+
+### Go语言
+
+#### 教程
+1. [PHPer看的Go语言入门教程](https://github.com/xx19941215/light-go)
 
 
 ### PHP
