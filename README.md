@@ -11,11 +11,11 @@
 
 > 收藏请点star，如发现有错误欢迎PR
 
-### Backer and Sponsor
+### Thanks to
 >jetbrains
 
 <a href="https://www.jetbrains.com/?from=xx19941215/light-tips" target="_blank">
-<img src="https://github.com/LockGit/gochat/blob/master/architecture/jetbrains-gold-reseller.svg" width="100px" height="100px">
+Jetbrains
 </a>
 
 ### 数据结构和算法
