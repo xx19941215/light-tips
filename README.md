@@ -11,13 +11,6 @@
 
 > 收藏请点star，如发现有错误欢迎PR
 
-### Thanks to
->jetbrains
-
-<a href="https://www.jetbrains.com/?from=xx19941215/light-tips" target="_blank">
-Jetbrains
-</a>
-
 ### 数据结构和算法
 
 #### 算法
